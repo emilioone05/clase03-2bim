@@ -13,11 +13,11 @@ public abstract class Docente {
         nombre = n;
     }
     
-    public void establecerDocente(String n){
+    public void setNombre(String n){
         nombre = n;
     }
     
-    public String obtenerDocente(){
+    public String getNombre(){
         return nombre;
     }
     
@@ -25,6 +25,8 @@ public abstract class Docente {
         sueldo = d;
     }*/
     
+    /*Solo coln el abstratc ya esta obligadas todas las clases que hereden de la SuperClase de darle un valor a la funcion Obtener
+    Sueldo porque es abstract*/
     public abstract void obtenerSueldo();
     
     
