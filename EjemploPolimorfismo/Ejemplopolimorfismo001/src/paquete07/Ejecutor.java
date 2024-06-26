@@ -1,18 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paquete07;
-
 import java.util.ArrayList;
-
-/**
- *
- * @author reroes
- */
-public class Ejecutor {
+import java.util.Scanner;
+public class Ejecutor {   //Nombres : Pedro Yepez, Emilio Peña, Jean Carlos
     public static void main(String[] args) {
+        Scanner put = new Scanner(System.in);
         /*
         clase uno abstracta llamada Figura; con atributos:
         características y área; la clase debe tener un método
@@ -31,13 +22,36 @@ public class Ejecutor {
         
         // inicio de la solución
         ArrayList<Figura> figuras = new ArrayList<>();
-        
+        int seguir =1;
+        do {                
+            System.out.println("Elija su figura");
+            System.out.println("1 triangulo");
+            System.out.println("2 rombo");
+            System.out.println("3 cuadrado");
+            System.out.println("4 salir");
+            int figura=put.nextInt();
+            put.nextLine();
+            System.out.println("Ingrese las caracteristicas");
+            String caract = put.nextLine();
+            
+            switch(figura){
+                case 1: 
+                    System.out.println("Ingrese la base");
+                    double base= put.nextDouble();
+                    System.out.println("Ingrese la altyura");
+                    double altura= put.nextDouble();
+                    Triangulo tri = new Triangulo(base, altura, caract);   
+                    break;
+                case 2:
+                    
+            }
+        } while (seguir ==1);
         
         
         // proceso para comprobar el polimorfismo
         for (int i = 0; i < figuras.size(); i++) {
             // 1.  
-            figuras.get(i).calcular_area();
+            figuras.get(i).calcularArea();
             
             System.out.printf("Datos de Figura\n"
                         + "%s\n",                        

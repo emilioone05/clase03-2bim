@@ -79,10 +79,8 @@ public abstract class Estudiante {
     public double obtenerMatricula(){
         return matricula;
     }
-
     @Override
     public String toString() {
         return "Estudiante{" + "nombresEstudiante=" + nombresEstudiante + ", apellidosEstudiante=" + apellidosEstudiante + ", identificacionEstudiante=" + identificacionEstudiante + ", edadEstudiante=" + edadEstudiante + ", matricula=" + matricula + '}';
     }
-    
 }
