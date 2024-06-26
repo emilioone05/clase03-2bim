@@ -1,7 +1,7 @@
 package paquete07;
 import java.util.ArrayList;
 import java.util.Scanner;
-public class Ejecutor {   //Nombres : Pedro Yepez, Emilio Peña, Jean Carlos
+public class Ejecutor {   //Integrantes : Pedro Yepez, Emilio Peña, Jean Carlos !!!!!!!!!!!!
     public static void main(String[] args) {
         Scanner put = new Scanner(System.in);
         /*
@@ -22,7 +22,7 @@ public class Ejecutor {   //Nombres : Pedro Yepez, Emilio Peña, Jean Carlos
         
         // inicio de la solución
         ArrayList<Figura> figuras = new ArrayList<>();
-        int seguir =1;
+        int seguir = 1;
         do {                
             System.out.println("Elija su figura");
             System.out.println("1 triangulo");
@@ -36,15 +36,33 @@ public class Ejecutor {   //Nombres : Pedro Yepez, Emilio Peña, Jean Carlos
             
             switch(figura){
                 case 1: 
-                    System.out.println("Ingrese la base");
+                    System.out.println("Ingrese la longitud de la base");
                     double base= put.nextDouble();
-                    System.out.println("Ingrese la altyura");
+                    System.out.println("Ingrese la longitud de la altura");
                     double altura= put.nextDouble();
                     Triangulo tri = new Triangulo(base, altura, caract);   
+                    figuras.add(tri);
                     break;
                 case 2:
-                    
+                    System.out.println("Ingrese la longitud de la diagonal mayor");
+                    double diagMay = put.nextDouble();
+                    System.out.println("Ingrese la longitud de la diagonal menor");
+                    double diagMen = put.nextDouble();
+                    Rombo romb = new Rombo(diagMen, diagMay, caract);
+                    figuras.add(romb);
+                    break;
+                case 3:
+                    System.out.println("Ingrese la longitud del lado");
+                    double lado = put.nextDouble();
+                    Cuadrado cuad = new Cuadrado(lado, caract);
+                    figuras.add(cuad);
+                    break;
             }
+            System.out.println("Desea anadir otra figura?");
+            System.out.println("[1] Si\n[2] No");
+            seguir = put.nextInt();
+        
+            
         } while (seguir ==1);
         
         

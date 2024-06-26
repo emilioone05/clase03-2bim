@@ -23,7 +23,7 @@ public abstract class Figura {
 
     @Override
     public String toString() {
-        return "Figura{" + "caracteristicas=" + caracteristicas + ", area=" + area +" "+ super.toString()+ '}';
+        return "Figura{" + "caracteristicas=" + caracteristicas + ", area=" + area +'}';
     }
     
 
